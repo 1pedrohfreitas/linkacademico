@@ -52,6 +52,10 @@ export default function SendCurriculo() {
             typeof value === 'string' ? value.split(',') : value,
         );
     };
+    const defaultCursos = {
+        options: cursos,
+        getOptionLabel: (option) => option.name,
+    };
 
     const cursos = [
         { id: 1, name: "Direito" },
@@ -97,24 +101,16 @@ export default function SendCurriculo() {
     // const handleChanceListCursosAtuacao = () => {
     //     setCursoAtuacao(cursosatuacao.filter(a => a.cursoid == cursoSelected))
     // }
-    const defaultCursos = {
-        options: cursos,
-        getOptionLabel: (option) => option.name,
-    };
+
     let defaultAreadeatuacao = {
         options: cursosatuacao,
         getOptionLabel: (option) => option.name,
     };
     return (
         <div id='homeArea'>
-            <div className="header">
-                <img src={logo} alt="logo" />
-            </div>
-
             <div className="formCad">
-            <TextField id="name" label="Nome Completo:" variant="outlined" />
-            <TextField id="email" label="E-mail:" variant="outlined" />
-            
+                <TextField id="name" label="Nome Completo:" variant="outlined" />
+                <TextField id="email" label="E-mail:" variant="outlined" />
             </div>
             <div className="definecurso">
                 <div className="definircurso">
