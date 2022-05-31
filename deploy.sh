@@ -1,9 +1,9 @@
 #!/bin/bash
 echo "Parando os serviços"
-docker stop petdiniz-linkacademico-1
+docker stop linkacademico-linkacademico-1
 
 echo "Removendo os containers"
-docker rm petdiniz-linkacademico-1
+docker rm linkacademico-linkacademico-1
 
 echo "Removendo as imagens"
 docker rmi pedrohfreitas/linkacademico:1.0
