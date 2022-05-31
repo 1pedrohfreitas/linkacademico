@@ -1,0 +1,7 @@
+version: '3'
+services:
+  linkacademico:
+    image: 'pedrohfreitas/linkacademico:1.0'
+    restart: unless-stopped
+    ports:
+      - '8888:80'
